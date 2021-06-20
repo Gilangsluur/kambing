@@ -34,7 +34,7 @@ def login():
         time.sleep(0.7)
         gas(t).menu()
     except KeyError:
-        print('Token Bor!')
+        print('Bukan Token Listrik Yaa!!')
         login()
 def logika():
     try:
